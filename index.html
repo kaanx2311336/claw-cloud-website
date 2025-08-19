@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merhaba Dünya - Claw Cloud</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin: 2rem;
+        }
+        h1 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        p {
+            color: #666;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        .button:hover {
+            transform: translateY(-2px);
+        }
+        .info {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Merhaba Dünya!</h1>
+        <p>Claw Cloud'da ilk web sayfam başarıyla çalışıyor!</p>
+        <p>Bu sayfa modern HTML5, CSS3 ve responsive tasarım ile oluşturulmuştur.</p>
+        <a href="#" class="button" onclick="showMessage()">Tıkla Beni!</a>
+        <div class="info">
+            <strong>📊 Sayfa Bilgileri:</strong><br>
+            Oluşturulma: <span id="date"></span><br>
+            Platform: Claw Cloud Run<br>
+            Durum: ✅ Aktif
+        </div>
+    </div>
+
+    <script>
+        // Tarih gösterimi
+        document.getElementById('date').textContent = new Date().toLocaleDateString('tr-TR');
+        
+        // Buton tıklama fonksiyonu
+        function showMessage() {
+            alert('🎊 Tebrikler! Claw Cloud\'da ilk interaktif web sayfanız çalışıyor!');
+        }
+        
+        // Sayfa yüklendiğinde animasyon
+        window.addEventListener('load', function() {
+            document.querySelector('.container').style.animation = 'fadeIn 1s ease-in';
+        });
+        
+        // CSS animasyonu ekleme
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(30px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
