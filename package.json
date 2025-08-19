@@ -1,0 +1,40 @@
+{
+  "name": "@kaanx2311336/claw-cloud-website",
+  "version": "1.0.0",
+  "description": "Basit Web Sayfası - Claw Cloud Deploy için hazırlanmış responsive web sayfası",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8080",
+    "docker:build": "docker build -t claw-cloud-website .",
+    "docker:run": "docker run -p 8080:80 claw-cloud-website"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaanx2311336/claw-cloud-website.git"
+  },
+  "keywords": [
+    "web",
+    "html",
+    "css",
+    "javascript",
+    "docker",
+    "claw-cloud",
+    "cloudflare",
+    "responsive",
+    "turkish"
+  ],
+  "author": "Claw Cloud User",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kaanx2311336/claw-cloud-website/issues"
+  },
+  "homepage": "https://github.com/kaanx2311336/claw-cloud-website#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "files": [
+    "index.html",
+    "Dockerfile",
+    "README.md"
+  ]
+}
